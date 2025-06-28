@@ -1,0 +1,49 @@
+{
+  "name": "coderabbit-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server für CodeRabbit Integration - AI-powered Code Review Tools",
+  "main": "dist/MCPServer.js",
+  "bin": {
+    "coderabbit-mcp-server": "bin/server.mjs"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node bin/server.mjs",
+    "server": "node dist/MCPServer.js",
+    "dev": "ts-node src/MCPServer.ts",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean"
+  },
+  "keywords": [
+    "mcp",
+    "server",
+    "coderabbit",
+    "code-review",
+    "ai",
+    "typescript"
+  ],
+  "author": "CodeRabbit MCP Team",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "axios": "^1.7.9",
+    "node-fetch": "^3.3.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
+    "eslint": "^9.18.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
